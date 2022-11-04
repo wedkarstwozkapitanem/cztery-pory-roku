@@ -9,7 +9,7 @@ h1 {
 	color: blue;
 	text-shadow: 3px 3px 8px;
 	font-size: 88px;
-	height: 88px;
+	min-height: 88px;
 	box-shadow: 3px 3px 8px green;
 	margin: 8px;
 	border-radius: 28px;
