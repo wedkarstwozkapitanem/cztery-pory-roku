@@ -1,8 +1,7 @@
 body {
 	text-align: center;
 	background: linear-gradient(45deg, rgb(255, 0, 0), rgb(251, 243, 0));
-	min-height: 100vh;
-	overflow: hidden;
+	height: 100vh;
 }
 
 h1 {
