@@ -1,23 +1,22 @@
 body {
 	text-align: center;
 	overflow-x: hidden;
-	background: linear-gradient(45deg,rgba(0, 0, 0, 0.585),black);
+	background: linear-gradient(45deg, rgba(0, 0, 0, 0.585), black);
 	background: black;
 }
 
 ::-webkit-scrollbar {
 	width: 20px;
 	background-color: rgb(128, 83, 0);
-  }
-  ::-webkit-scrollbar-thumb {
-	background: rgb(60, 0, 255); 
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgb(60, 0, 255);
 	border-radius: 20px;
-  }
+}
 
 
 h1 {
-	color: blue;
-	text-shadow: 3px 3px 8px;
 	font-size: 88px;
 	min-height: 88px;
 	box-shadow: 3px 3px 8px green;
@@ -29,12 +28,17 @@ h1 {
 	width: fit-content;
 	display: inline-block;
 	background: linear-gradient(175deg, rgb(0 255 149), rgb(255 113 0));
+	border: 3px groove green;
+	color: white;
+	text-shadow: 0 0 4px black, 0 0 4px #fe05e1, 0 0 4px #fe05e1;
+	transform: skew(-20deg);
+
 }
 
 nav {
 	display: flex;
 	flex-wrap: wrap;
-    justify-content: center;
+	justify-content: center;
 }
 
 button {
@@ -46,14 +50,16 @@ button {
 	border: 0;
 	font-family: fantasy;
 	border: 1px groove black;
-	color:rgb(0, 54, 251);
+	color: rgb(0, 54, 251);
+	text-shadow: 0 0 4px black;
+	box-shadow: 3px 3px 4px black;
 }
 
 
 
 .pora {
 	float: left;
-	width: 350px;
+	width: 340px;
 	margin: 10px;
 	box-shadow: 8px 8px 4px rgb(17, 17, 17);
 	border: 1px groove black;
@@ -61,10 +67,11 @@ button {
 	cursor: pointer;
 	animation: pokazporyroku 4s ease;
 	position: relative;
-	color:rgb(255, 17, 0);
+	color: rgb(255, 17, 0);
 	font-family: fantasy;
-	background: linear-gradient(45deg, black,#1ec5e9);
-	background: linear-gradient(45deg,rgb(74 71 71 / 83%),black);
+	background: linear-gradient(45deg, black, #1ec5e9);
+	background: linear-gradient(45deg, rgb(74 71 71 / 83%), black);
+	padding: 4px;
 }
 
 
@@ -73,6 +80,7 @@ button {
 	width: 300px;
 	animation: pora 4s infinite;
 	border: 1px solid #c7ff00;
+	box-shadow: 0 0 8px rgb(43, 1, 255);
 	border-radius: 28px;
 }
 
@@ -91,7 +99,7 @@ button {
 }
 
 .pora:hover {
-	transform:  rotate(10deg) scale(1.1);
+	transform: rotate(10deg) scale(1.1);
 	z-index: 8;
 }
 
@@ -120,8 +128,9 @@ button {
 
 @keyframes przezroczystosc {
 	0% {
-		opacity:0;
+		opacity: 0;
 	}
+
 	100% {
 		opacity: 1;
 	}
