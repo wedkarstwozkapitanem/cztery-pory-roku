@@ -3,10 +3,11 @@ body {
 	overflow-x: hidden;
 	background: linear-gradient(45deg, rgba(0, 0, 0, 0.585), black);
 	background: black;
+	margin: 0;
 }
 
 ::-webkit-scrollbar {
-	width: 20px;
+	width: 4px;
 	background-color: rgb(128, 83, 0);
 }
 
@@ -32,7 +33,7 @@ h1 {
 	color: white;
 	text-shadow: 0 0 4px black, 0 0 4px #fe05e1, 0 0 4px #fe05e1;
 	transform: skew(-20deg);
-
+    animation: przezroczystosc 12s ease,swiatlo 4s infinite;
 }
 
 nav {
@@ -52,7 +53,8 @@ button {
 	border: 1px groove black;
 	color: rgb(0, 54, 251);
 	text-shadow: 0 0 4px black;
-	box-shadow: 3px 3px 4px black;
+	box-shadow: 3px 3px 8px rgb(255, 0, 0),
+	-3px -3px 8px rgb(255, 0, 0);
 }
 
 
@@ -61,27 +63,53 @@ button {
 	float: left;
 	width: 340px;
 	margin: 10px;
-	box-shadow: 8px 8px 4px rgb(17, 17, 17);
+
 	border: 1px groove black;
 	border-radius: 28px;
 	cursor: pointer;
-	animation: pokazporyroku 4s ease;
+	animation: pokazporyroku 24s ease, swiatlo 1s infinite;
 	position: relative;
 	color: rgb(255, 17, 0);
 	font-family: fantasy;
-	background: linear-gradient(45deg, black, #1ec5e9);
-	background: linear-gradient(45deg, rgb(74 71 71 / 83%), black);
+	background: linear-gradient(45deg, rgb(74 71 71 / 80%), black);
 	padding: 4px;
+
+	box-shadow: 4px 4px 8px rgb(249, 224, 0),
+	-4px 4px 8px rgb(249, 224, 0);
+transition: 4s;
 }
 
+.jakapora {
+	width: 340px;
+	margin: 10px;
+	border: 1px groove black;
+	border-radius: 28px;
+	position: relative;
+	color: rgb(255, 17, 0);
+	font-family: fantasy;
+	background: linear-gradient(45deg, rgb(74 71 71 / 80%), black);
+	padding: 4px;
+	box-shadow: 4px 4px 8px rgb(249, 224, 0),
+	-4px 4px 8px rgb(249, 224, 0);
+}
 
+.jakapora img {
+	margin: 28px 10px 28px 10px;
+	width: 300px;
+	border: 1px solid #c7ff00;
+	box-shadow: -2px -2px 8px rgb(43, 1, 255),
+	2px 2px 4px rgb(43, 1, 255);
+	border-radius: 28px;
+	animation: przezroczystosc 10s ease,pora 4s infinite;
+}
 .pora img {
 	margin: 28px 10px 28px 10px;
 	width: 300px;
-	animation: pora 4s infinite;
 	border: 1px solid #c7ff00;
-	box-shadow: 0 0 8px rgb(43, 1, 255);
+	box-shadow: -2px -2px 8px rgb(43, 1, 255),
+	2px 2px 4px rgb(43, 1, 255);
 	border-radius: 28px;
+	animation: przezroczystosc 10s ease,pora 4s infinite;
 }
 
 @keyframes pora {
@@ -99,7 +127,7 @@ button {
 }
 
 .pora:hover {
-	transform: rotate(10deg) scale(1.1);
+	transform: rotate(4deg) scale(1.1);
 	z-index: 8;
 }
 
@@ -113,16 +141,18 @@ button {
 	padding: 8px;
 	border-radius: 28px;
 	cursor: pointer;
-	border: 1px groove black;
+	border: 1px dotted black;
+	position: relative;
+	animation: pokazokres 1s ease;
 }
 
 @keyframes pokazporyroku {
 	0% {
-		top: -488px;
+		left: 100%;
 	}
 
 	100% {
-		top: 0;
+		left: 0;
 	}
 }
 
@@ -133,5 +163,64 @@ button {
 
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes pokazokres {
+	0% {
+		top:488px;
+	}
+	100% {
+		top:0;
+	}
+}
+
+@keyframes swiatlo {
+	0% {
+		box-shadow: 0 -8px 8px rgb(37, 249, 0),
+		0 8px 8px rgb(8, 249, 0);
+	} 
+}
+
+
+
+.calyekran {
+	position: fixed;
+    top: 0px;
+    right: 0px;
+    width: 100%;
+    height: 100vh;
+	background: rgba(0, 0, 0, 0.90);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+.zamknij {
+	width: 350px;
+	height: 48px;
+	background: red;
+	color:white;
+	font-size: 28px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius:28px;
+}
+.zamknij:hover {
+background: white;
+color:red;
+}
+
+@keyframes pokapore {
+	0% {
+		transform: rotate(0);
+	}
+	50% {
+		transform: rotate(180deg);
+	}
+	100% {
+		transform: rotate(360deg);
 	}
 }
