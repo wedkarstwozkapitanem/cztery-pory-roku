@@ -18,32 +18,88 @@
         <h1>Cztery pory roku</h1>
 
         <nav>
-            <div class="pora">
+            <div class="pora" onclick="powieksz(0,'k')">
                 <button style="background:#2ddf8d;"> Wiosna </button>
                 <img src="zdjecia/wiosna.jpg" alt="wiosna" />
                 <div style="background:#2ddf8d;" class="okres"> Wiosna trwa 92-93 dni. <br> Zaczyna się 20 marca
                     (rzadziej 21 marca) </div>
             </div>
-            <div class="pora">
+            <div class="pora" onclick="powieksz(1,'k')">
                 <button style="background:#e5de85;"> Lato </button>
                 <img src="zdjecia/lato.jpg" alt="lato" />
                 <div style="background:#e5de85;" class="okres"> Lato trwa 92-93 dni <br> Zaczyna się 21 czerwca
                     (rzadziej 20 czerwca) </div>
             </div>
-            <div class="pora">
+            <div class="pora" onclick="powieksz(2,'k')">
                 <button style="background:orange"> Jesień </button>
                 <img src="zdjecia/jesien.jpg" alt="jesień" />
                 <div style="background:orange" class="okres"> Jesień trwa 89-90 dni. <br> Zaczyna się 22 lub 23 września
                 </div>
             </div>
-            <div class="pora">
+            <div class="pora" onclick="powieksz(3,'k')">
                 <button style="background:#81f9e3"> Zima </button>
                 <img src="zdjecia/zima.jpg" alt="zima" />
                 <div style="background:#81f9e3" class="okres"> Zima trwa 88-89 dni. <br> Zaczyna się 21 lub 22 grudnia
                 </div>
             </div>
         </nav>
+
+
+        <div id="calyekran" class="calyekran" style="display: none;"><div id="calyekranwyswietl"></div><div onclick="zamknij()" class="zamknij">Zamknij</div></div>
+        <div id="calyekranp" class="calyekran" style="display: none;"><div id="calyekranwyswietlp"></div><div onclick="zamknij()" class="zamknij">Zamknij</div></div>
     </main>
+
+    <script>
+        var jakielement = -1;
+        var jakapora = "";
+
+        window.onload = () => {
+            var jakapora = setInterval(ktorapora, 5000);
+        }
+
+
+        var animacja = true;
+        function ktorapora() {
+            if (jakielement >= document.querySelectorAll('.pora').length - 1) {
+                clearInterval(jakapora);
+                jakapora = "";
+                jakielement = 0;
+                document.getElementById('calyekran').style.display = 'none';
+                animacja = false;
+            } else {
+                jakielement = parseFloat(jakielement) + parseFloat(1);
+            }
+            powiekszp(jakielement);
+        }
+
+        function powiekszp(ktory) {
+            for (wszystkiepory = 0; wszystkiepory < document.querySelectorAll('.pora').length; wszystkiepory++) {
+                document.querySelectorAll('.pora')[wszystkiepory].style.transform = "scale(1)";
+            }
+            if (animacja == true) {
+                let ekran = document.getElementById('calyekran');
+                let ekranwyswietl = document.getElementById('calyekranwyswietl');
+                ekran.style.display = "flex";
+                ekranwyswietl.innerHTML = `<div class="jakapora"> ${document.querySelectorAll('.pora')[ktory].innerHTML} </div> `;
+                document.querySelectorAll('.pora')[jakielement].style.transform = "scale(1.1)";
+            }
+        }
+
+        function powieksz(ktory) {
+            for (wszystkiepory = 0; wszystkiepory < document.querySelectorAll('.pora').length; wszystkiepory++) {
+                document.querySelectorAll('.pora')[wszystkiepory].style.transform = "scale(1)";
+            }
+            let ekran = document.getElementById('calyekranp');
+                ekran.style.display = "flex";
+                let ekranwyswietl = document.getElementById('calyekranwyswietlp');
+                ekranwyswietl.innerHTML = `<div class="jakapora"> ${document.querySelectorAll('.pora')[ktory].innerHTML} </div> `;
+                document.querySelectorAll('.pora')[jakielement].style.transform = "scale(1.1)";
+        }
+        function zamknij() {
+            document.getElementById('calyekranp').style.display = 'none';
+            document.getElementById('calyekran').style.display = 'none';            
+        }
+    </script>
 </body>
 
 </html>
