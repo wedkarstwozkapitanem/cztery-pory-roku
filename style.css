@@ -33,7 +33,7 @@ h1 {
 	color: white;
 	text-shadow: 0 0 4px black, 0 0 4px #fe05e1, 0 0 4px #fe05e1;
 	transform: skew(-20deg);
-    animation: przezroczystosc 12s ease,swiatlo 4s infinite;
+	animation: przezroczystosc 12s ease, swiatlo 4s infinite;
 }
 
 nav {
@@ -54,7 +54,7 @@ button {
 	color: rgb(0, 54, 251);
 	text-shadow: 0 0 4px black;
 	box-shadow: 3px 3px 8px rgb(255, 0, 0),
-	-3px -3px 8px rgb(255, 0, 0);
+		-3px -3px 8px rgb(255, 0, 0);
 }
 
 
@@ -75,8 +75,8 @@ button {
 	padding: 4px;
 
 	box-shadow: 4px 4px 8px rgb(249, 224, 0),
-	-4px 4px 8px rgb(249, 224, 0);
-transition: 4s;
+		-4px 4px 8px rgb(249, 224, 0);
+	transition: 4s;
 }
 
 .jakapora {
@@ -90,7 +90,7 @@ transition: 4s;
 	background: linear-gradient(45deg, rgb(74 71 71 / 80%), black);
 	padding: 4px;
 	box-shadow: 4px 4px 8px rgb(249, 224, 0),
-	-4px 4px 8px rgb(249, 224, 0);
+		-4px 4px 8px rgb(249, 224, 0);
 }
 
 .jakapora img {
@@ -98,18 +98,19 @@ transition: 4s;
 	width: 300px;
 	border: 1px solid #c7ff00;
 	box-shadow: -2px -2px 8px rgb(43, 1, 255),
-	2px 2px 4px rgb(43, 1, 255);
+		2px 2px 4px rgb(43, 1, 255);
 	border-radius: 28px;
-	animation: przezroczystosc 10s ease,pora 4s infinite;
+	animation: przezroczystosc 10s ease, pora 4s infinite;
 }
+
 .pora img {
 	margin: 28px 10px 28px 10px;
 	width: 300px;
 	border: 1px solid #c7ff00;
 	box-shadow: -2px -2px 8px rgb(43, 1, 255),
-	2px 2px 4px rgb(43, 1, 255);
+		2px 2px 4px rgb(43, 1, 255);
 	border-radius: 28px;
-	animation: przezroczystosc 10s ease,pora 4s infinite;
+	animation: przezroczystosc 10s ease, pora 4s infinite;
 }
 
 @keyframes pora {
@@ -168,28 +169,29 @@ transition: 4s;
 
 @keyframes pokazokres {
 	0% {
-		top:488px;
+		top: 488px;
 	}
+
 	100% {
-		top:0;
+		top: 0;
 	}
 }
 
 @keyframes swiatlo {
 	0% {
 		box-shadow: 0 -8px 8px rgb(37, 249, 0),
-		0 8px 8px rgb(8, 249, 0);
-	} 
+			0 8px 8px rgb(8, 249, 0);
+	}
 }
 
 
 
 .calyekran {
 	position: fixed;
-    top: 0px;
-    right: 0px;
-    width: 100%;
-    height: 100vh;
+	top: 0px;
+	right: 0px;
+	width: 100%;
+	height: 100%;
 	background: rgba(0, 0, 0, 0.90);
 	display: flex;
 	justify-content: center;
@@ -198,29 +200,81 @@ transition: 4s;
 }
 
 .zamknij {
-	width: 350px;
+	width: 184px;
 	height: 48px;
 	background: red;
-	color:white;
+	color: white;
 	font-size: 28px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	border-radius:28px;
+	border-radius: 28px;
+	position: fixed;
+	right: 0;
+	top: 0;
+	box-shadow: 3px 3px 8px yellow, -3px -3px 8px greenyellow;
 }
+
 .zamknij:hover {
-background: white;
-color:red;
+	background: white;
+	color: red;
+	cursor: pointer;
 }
 
 @keyframes pokapore {
 	0% {
 		transform: rotate(0);
 	}
+
 	50% {
 		transform: rotate(180deg);
 	}
+
 	100% {
 		transform: rotate(360deg);
 	}
 }
+
+.strzalka {
+	background: blue;
+	color: white;
+	width: 100px;
+	font-size: 48px;
+	position: fixed;
+	cursor: pointer;
+	z-index: 10;
+	bottom: 48px;
+	box-shadow: 4px 4px 8px white, -4px -4px 8px white;
+	border-radius: 28px;
+}
+
+.strzalka span {
+	position: relative;
+}
+
+.strzalka:hover {
+	color: blue;
+	background: white;
+}
+
+@keyframes strzalkap {
+	0% {
+		left: -28px;
+	}
+
+	100% {
+		left: 28px;
+	}
+}
+
+@keyframes strzalkal {
+	0% {
+		left: 28px;
+	}
+
+	100% {
+		left: -28px;
+	}
+}
+
+/* Dominikapitan Łempicki */
