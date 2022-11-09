@@ -34,6 +34,7 @@ h1 {
 	text-shadow: 0 0 4px black, 0 0 4px #fe05e1, 0 0 4px #fe05e1;
 	transform: skew(-20deg);
 	animation: przezroczystosc 12s ease, swiatlo 4s infinite;
+	font-family: cursive;
 }
 
 nav {
@@ -155,7 +156,7 @@ button {
 	cursor: pointer;
 	border: 1px dotted black;
 	position: relative;
-	animation: pokazokres 1s ease;
+	animation: pokazokres 4s ease;
 }
 
 @keyframes pokazporyroku {
