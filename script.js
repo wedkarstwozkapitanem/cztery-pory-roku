@@ -81,3 +81,8 @@ document.addEventListener('keyup', (e) => {
         nastepne('wstecz');
     }
 });
+
+
+
+
+//Dominik Łempicki kl.2bLO informatyka
