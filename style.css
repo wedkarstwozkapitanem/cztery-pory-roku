@@ -35,6 +35,7 @@ h1 {
 	transform: skew(-20deg);
 	animation: przezroczystosc 12s ease, swiatlo 4s infinite;
 	font-family: cursive;
+	max-width: 68%;
 }
 
 nav {
@@ -287,6 +288,26 @@ button {
 	100% {
 		left: -28px;
 	}
+}
+
+#numer,#numerp {
+	position: relative;
+	color:white;
+	font-size: 48px;
+	font-weight: 800;
+}
+
+#jaki {
+	font-size: 68px;
+	color:white;
+	font-weight: 888;
+}
+
+footer {
+	color: white;
+    position: fixed;
+    bottom: 0px;
+    left: 0;
 }
 
 /* Dominikapitan Łempicki */
