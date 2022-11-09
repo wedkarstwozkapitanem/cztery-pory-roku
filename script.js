@@ -21,6 +21,7 @@ function ktorapora() {
 }
 
 function powiekszp(ktory) {
+    document.getElementById('numer').innerHTML = parseFloat(ktory) + parseFloat(1) + '/4';
     for (wszystkiepory = 0; wszystkiepory < document.querySelectorAll('.pora').length; wszystkiepory++) {
         document.querySelectorAll('.pora')[wszystkiepory].style.transform = "scale(1)";
     }
@@ -41,9 +42,14 @@ function powieksz(ktory) {
     ekran.style.display = "flex";
     let ekranwyswietl = document.getElementById('calyekranwyswietlp');
     ekranwyswietl.innerHTML = `<div class="jakapora"> ${document.querySelectorAll('.pora')[ktory].innerHTML} </div> `;
+    jaki = document.createElement('div');
+    jaki.id = "jaki";
+    jaki.innerHTML = parseFloat(ktory) + parseFloat(1) + '/4';
+    ekranwyswietl.appendChild(jaki);
     document.querySelectorAll('.pora')[ktory].style.transform = "scale(1.1)";
     jaki = ktory;
 }
+
 function zamknij() {
     document.getElementById('calyekranp').style.display = 'none';
     document.getElementById('calyekran').style.display = 'none';
@@ -75,5 +81,3 @@ document.addEventListener('keyup', (e) => {
         nastepne('wstecz');
     }
 });
-
-// Dominik Łempicki 2bLO kod js
