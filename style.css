@@ -76,7 +76,7 @@ button {
 
 	box-shadow: 4px 4px 8px rgb(249, 224, 0),
 		-4px 4px 8px rgb(249, 224, 0);
-	transition: 4s;
+	transition: 2s;
 }
 
 .jakapora {
@@ -91,6 +91,7 @@ button {
 	padding: 4px;
 	box-shadow: 4px 4px 8px rgb(249, 224, 0),
 		-4px 4px 8px rgb(249, 224, 0);
+	animation: obrot 3s ease;
 }
 
 .jakapora img {
@@ -128,8 +129,18 @@ button {
 }
 
 .pora:hover {
-	transform: rotate(4deg) scale(1.1);
+	transform: rotate(4deg) scale(1.1) !important;
 	z-index: 8;
+}
+
+@keyframes obrot {
+	0% {
+		opacity: 0;
+		transform: rotate3d(0,1,0, 180deg)
+	} 100% {
+		opacity: 1;
+		transform: rotate3d(0,1,0, 360deg);
+	} 
 }
 
 .okres {
