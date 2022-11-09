@@ -75,3 +75,5 @@ document.addEventListener('keyup', (e) => {
         nastepne('wstecz');
     }
 });
+
+// Dominik Łempicki 2bLO kod js
